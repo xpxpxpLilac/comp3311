@@ -2,7 +2,7 @@
 --
 -- updates.sql
 --
--- Written by <<Yuexuan Liu>> (<<z5093599>>), May 2018
+-- Written by Y.Liu, May 2018
 
 --  This script takes a "vanilla" MyMyUNSW database and
 --  make all of the changes necessary to make the databas

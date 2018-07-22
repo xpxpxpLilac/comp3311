@@ -1,5 +1,5 @@
 -- COMP3311 18s1 Assignment 1
--- Written by Yuexuan Liu (z5093599), April 2018
+-- Written by Y.Liu April 2018
 
 -- Q1: ...
 

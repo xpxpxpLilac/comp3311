@@ -1,7 +1,7 @@
 <?php
 // COMP3311 18s1 Assignment 2
 // Functions for assignment Tasks A-E
-// Written by <<Yuexuan Liu>> (z5093599), May 2018
+// Written by Y.Liu May 2018
 
 // assumes that defs.php has already been included
 
