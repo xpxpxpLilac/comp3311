@@ -1,0 +1,27 @@
+# COMP3311 12s1 Exam Q10
+
+(a)
+name, the total number of goals they have got
+
+(b)
+1+500=501
+
+(c)
+
+<?
+require(".../db.php");
+$db = dbConnect("dbname=exam");
+
+$q = <<<_SQL_
+select .. .. count()
+from players left join goals on
+group by .. 
+
+_SQL_;
+
+$r = dbQuery($db, mkSQL($q))
+while ($t = dbNext($r)) {
+	list($id,$name) = $t;
+	printf("%s %d\n", $name, $ng);
+}
+?>

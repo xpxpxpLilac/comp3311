@@ -1,0 +1,5 @@
+select * from q7;
+select * from q8 order by country, count;
+select * from q9 order by country, nstyles;
+select * from q10 order by brewer, country;
+select * from q11 where user='Vittoria Dubowitz' order by style;

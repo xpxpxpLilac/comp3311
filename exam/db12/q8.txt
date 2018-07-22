@@ -1,0 +1,43 @@
+# COMP3311 12s1 Exam Q8
+
+(a)
+CREATE TABLE Employee (
+	id integer,
+	name varchar(30) not null,
+	position varchar(100) not null,
+	primary key(id)
+);
+
+CREATE TABLE PartTime(
+	id integer,
+	fraction float check (fraction > 0.0 and fraction < 1.0),
+	primary key(id),
+	foreign key(id) references Employee(id)
+);
+CREATE TABLE Casual(
+	id integer,
+	primary key(id),
+	foreign key(id) references Employee(id)
+);
+CREATE TABLE Hours(
+	id integer,
+	workdate date not null,
+	starting time not null,
+	ending time not null, 
+	primary key(id,workdate),
+	foreign key(id) references Employee(id)
+	constraint timing check (starting < ending)
+);
+
+
+(b)
+CREATE TABLE Employee(
+	id integer,
+	name varchar(30) not null,
+	position varchar(100) not null,
+	parttime float,
+	casual text,
+	constraint totaldisjoint check
+	(())
+
+);

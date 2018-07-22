@@ -1,0 +1,31 @@
+a)select studio from 
+movie where dir = 'dd'
+
+res = Proj[Studio](Sel[Director='Peter Weir'](Movie))
+
+b)
+select actor
+from movie join starring on title = mtitle
+where studio = 'pa'
+
+Proj[actor](Sel[studio='paramount'](movie Thetajoin[title=mtitle] starring))
+
+c)
+select title
+from movie join starring on title=mtitle
+where actor = 'TC'
+
+(Proj[title](Sel[actor='TC'](movie thetajoin[title=mrtitle] starring)))
+intersect
+(Proj[title](Sel[actor='NK'](movie thetajoin[title=mrtitle] starring)))
+
+d)
+select title from movir where dor = ''
+tmp = Proj[title](Sel[director='SK'](movie))
+
+select actor, tile from
+movie join starring on title=mtile
+
+tmp1=Proj[actor,title](movie thetajoin[title=mtitle] starring)
+
+tmp1 div tmp

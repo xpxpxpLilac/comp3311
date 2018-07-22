@@ -1,0 +1,28 @@
+# COMP3311 12s1 Exam Q9
+
+(a)
+create or replace function 
+	fixCoursesOnAddCourseEnrolment() returns tirgger
+as
+$$
+declare
+	s int,
+	e int,
+	avg float
+begin	
+	select nS,nE,avgEval into s,e,avg
+	from courses where id = new.course
+	s = s +1
+	e = e +1
+	avg = s::float/e;
+	
+	update Courses set ns = s, ne = e,avgeval = avg where id = new.course;
+	return new;
+end;
+$$ language plpgsql
+;
+(b)
+
+
+(c)
+

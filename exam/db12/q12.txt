@@ -1,0 +1,16 @@
+# COMP3311 12s1 Exam Q12
+
+(a)
+select eno, ename
+from employees
+where payrate >20
+
+Sel[payRate>20](Empl)
+(b)
+select ename 
+from department d join employees e on d.eno = e.eno
+
+
+Pro[ename](Dept join[dno=eno] Empl)
+(c)
+

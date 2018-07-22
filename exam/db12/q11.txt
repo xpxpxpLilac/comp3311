@@ -1,0 +1,35 @@
+# COMP3311 12s1 Exam Q11
+
+(a)
+A->BC,B->C,DE->F,ADE->G,BDE->G 
+
+(b)
+ADE+->ABCDEFG
+
+ADEFG
+ADE+
+{DE->F,ADE->G}
+
+ADEG IN BCNF
+{ADE->G}
+DEF ->IN BCNF
+{DE->F}
+
+ABC 
+A+
+{A->BC,B->C}
+
+A
+BC
+
+ADEG
+DEF
+A
+BC
+
+(c)
+
+1)STUDENT'S MARK For corresponding assessment
+2)assessment in a course and its corresponding maximum mark
+3)student ID
+4)student's name and it corresponding degree

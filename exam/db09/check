@@ -1,0 +1,31 @@
+#!/bin/sh
+
+case $# in
+1) ;;
+*) echo "Usage: $0 q7|q8|q9|q10|q11"; exit 1 ;;
+esac
+
+case $1 in
+q[789]) ;;
+q1[01]) ;;
+*) echo "Usage: $0 q7|q8|q9|q10|q11"; exit 1 ;;
+esac
+
+grep "$1" tests | (sqlite3 beers.db 2>&1) > $1.observed
+
+diff -wi $1.expected $1.observed > $1.diffs
+
+echo ===== Test for $1 =====
+grep "$1" tests
+
+if [ ! -s $1.diffs ]
+then
+	echo OK
+else
+	echo FAILED
+	echo "\n===== Your output ====="
+	cat $1.observed
+	echo "\n===== Expected output ====="
+	cat $1.expected
+	echo "\nSee the file $1.diffs for diff output"
+fi

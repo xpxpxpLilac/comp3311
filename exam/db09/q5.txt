@@ -1,0 +1,23 @@
+a)A+ = ABCDEF
+B)
+ABCEF
+AE+
+{A->B,A->C,E->F}
+ABCE
+AE+
+{A->B,A->C}
+ACE
+AE+
+{A->C}
+AE
+AC
+AB
+EF             ->BCNF
+CD              ->BCNF
+{C->D}
+AE
+AC
+AB
+CD
+EF
+C)YES
